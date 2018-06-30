@@ -40,9 +40,7 @@ class Song
   end
 
   def self.new_from_filename(filename)
-    artist_song = filename.split(" - ")
-    artist_name = artist_song[0]
-    song_name = artist_song[1].chomp(".mp3")
+    artist_song = parse_filename(filename)
     song = self.new_by_name(song_name)
     song.artist_name = artist_name
     song
