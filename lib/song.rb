@@ -56,7 +56,7 @@ class Song
   def self.parse_filename(filename)
     artist_song = filename.split(" - ")
     {
-      song_name: artist_song[0]
+      song_name: artist_song[0],
       artist_name: artist_song[1].chomp(".mp3")
     }
   end
