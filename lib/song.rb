@@ -57,7 +57,7 @@ class Song
     artist_song = filename.split(" - ")
     {
       song_name: artist_song[1].chomp(".mp3"),
-      artist_name: artist_song[0]
+      artist_name: artist_song[0],
     }
   end
 
