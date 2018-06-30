@@ -43,7 +43,7 @@ class Song
     artist_song = filename.split(" - ")
     artist_name = artist_song[0]
     song_name = artist_song[1].chomp(".mp3")
-    song = self.create_by_name(artist_song)
+    song = self.create_by_name(song_name)
   end
 
 end
