@@ -49,9 +49,9 @@ class Song
   end
 
   def self.create_from_filename(filename)
-
-    song = self.create_by_name(song_name)
-    song.artist_name = artist_name
+    artist_song = parse_filename(filename)
+    song = self.create_by_name(artist_song[:song_name])
+    song.artist_name = artist_song[:artist_name]
     song
   end
 
