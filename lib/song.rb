@@ -41,8 +41,8 @@ class Song
 
   def self.new_from_filename(filename)
     artist_song = parse_filename(filename)
-    song = self.new_by_name(song_name[:song_name])
-    song.artist_name = artist_name[:artist_name]
+    song = self.new_by_name(artist_song[:song_name])
+    song.artist_name = artist_song[:artist_name]
     song
   end
 
