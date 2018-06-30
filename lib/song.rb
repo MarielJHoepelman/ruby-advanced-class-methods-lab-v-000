@@ -53,10 +53,6 @@ class Song
     song
   end
 
-  def self.destroy_all
-    self.all.clear
-  end
-
   def self.parse_filename(filename)
     artist_song = filename.split(" - ")
     {
@@ -64,4 +60,9 @@ class Song
       artist_name: artist_song[1].chomp(".mp3")
     }
   end
+
+  def self.destroy_all
+    self.all.clear
+  end
+
 end
